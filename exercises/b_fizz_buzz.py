@@ -20,7 +20,20 @@ You should spend around 5 minutes on this exercice
 You have more examples in <root>/tests/test_b_fizz_buzz.py
 """
 
+def my_fizz_buzz(n):
+    # Write your code here
+    if n%3 == 0 and n%5 == 0:
+        return "fizzbuzz"
+    elif n%3 == 0:
+        return "fizz"
+    elif n%5 == 0:
+        return "buzz"
+    else:
+        return ""
 
 def fizz_buzz(n):
-    # Write your code here
-    pass
+    lst = []
+    for i in range(n):
+       lst.append(my_fizz_buzz(i))
+
+    return lst
