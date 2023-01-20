@@ -23,4 +23,10 @@ For example 4 = 2 * 2 is a perfect squares but 5 isn't.
 
 def perfect_squares(lower, upper):
     # Write your code here
-    pass
+    lst = []
+    for i in range(upper + 1):
+        if i*i > upper*upper:
+            return lst
+        if i*i >= lower and i*i <= upper:
+            lst.append(i*i)
+    return lst
