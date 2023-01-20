@@ -24,4 +24,11 @@ You should spend around 15 minutes on this exercice
 
 def camel_to_kebab(str):
     # Write your code here
-    pass
+    s = str[0].lower()
+    for i in range(1, len(str)):
+        if str[i-1].islower() and str[i].isupper():
+            s = s+'-'
+            s = s+str[i].lower()
+        else:
+            s = s+str[i].lower()
+    return s
