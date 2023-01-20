@@ -20,4 +20,5 @@ You have more examples in <root>/tests/test_a_reverse_string.py
 
 def reverse_string(str):
     # Write your code here
-    pass
+    str = str[::-1]
+    return str
