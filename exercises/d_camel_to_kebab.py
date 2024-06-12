@@ -23,10 +23,30 @@ You should spend around 15 minutes on this exercice
 
 
 def camel_to_kebab(str):
-    # Write your code here
+    # Lower first character
     s = str[0].lower()
+
+    # Flag to detect a capital word
+    capital_flag = False
+
     for i in range(1, len(str)):
-        if str[i-1].islower() and str[i].isupper():
+
+        # Capital word detection
+        capital_flag_old = capital_flag
+        if i < (len(str) - 1):
+            if str[i].isupper() and str[i+1].isupper():
+                capital_flag = True
+            else:
+                capital_flag = False
+
+        # Handle digits before
+        # Handle digits after
+        # Handle capital letter
+        # Handle capital word
+        if str[i].isnumeric()\
+           or str[i-1].isnumeric()\
+           or (str[i-1].islower() and str[i].isupper())\
+           or capital_flag_old == True and capital_flag == False:
             s = s+'-'
             s = s+str[i].lower()
         else:
